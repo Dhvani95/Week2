@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurants Form</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(44, 44, 44);
+  padding: 20px;
+}
+
+h1 {
+  color: #ffff;
+}
+
+form {
+  background-color: #000000;
+  align: center;
+  padding: 20px;
+  border-radius: 5px;
+  width: 40%;
+  box-shadow: 0 2px 5px rgb(255, 255, 255);
+}
+
+label {
+  font-weight: bold;
+  color: white;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #030303;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Restaurants Form</h1>
+  <form action="/restaurants/form" method="POST">
+    <label for="page">Page:</label>
+    <input type="number" id="page" name="page">
+    <br>
+    <label for="perPage">Per Page:</label>
+    <input type="number" id="perPage" name="perPage">
+    <br>
+    <label for="borough">Borough:</label>
+    <input type="text" id="borough" name="borough">
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
+

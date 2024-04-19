@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurants List</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: rgb(44, 44, 44);
+  padding: 20px;
+  align-items: center;
+}
+
+h1 {
+  color: #ffff;
+}
+
+form {
+  background-color: #020202;
+  align: center;
+  padding: 20px;
+  width: 40%;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(255, 255, 255);
+}
+
+label {
+  font-weight: bold;
+  align-items: center;
+  color: white;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  align-items: center;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  align-items: center;
+}
+  </style>
+</head>
+<body>
+  <h1>Restaurants Details</h1>
+  <div class="restaurant-list">
+    {{#each results1}}
+      <div class="restaurant">
+        <h2>{{this.name}}</h2>
+        <p>Cuisine: {{this.cuisine}}</p>
+        <p>Rating: {{this.rating}}</p>
+        <p>Borough: {{this.borough}}</p>
+      </div>
+    {{/each}}
+  </div>
+</body>
+</html>
